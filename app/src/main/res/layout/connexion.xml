@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/user"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
@@ -40,7 +40,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -61,7 +61,7 @@
             android:text="Mot de passe : "
             android:textColor="#0B0A0A"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/user" />
 
         <Button
             android:id="@+id/button"
@@ -79,7 +79,7 @@
             app:iconTint="#00BF2D2D"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
+            app:layout_constraintTop_toBottomOf="@+id/password"
             app:rippleColor="#C33131"
             app:strokeColor="#BD2020" />
 
