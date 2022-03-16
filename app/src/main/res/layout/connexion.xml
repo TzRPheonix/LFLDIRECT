@@ -8,18 +8,60 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="295dp"
-        android:layout_height="307dp"
+        android:layout_width="284dp"
+        android:layout_height="376dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="289dp"
+            android:layout_marginEnd="158dp"
+            android:background="@android:color/holo_red_dark"
+            android:backgroundTint="#BF2525"
+            android:foregroundTint="#CC2323"
+            android:text="MDP OUBLIE"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="#D81414"
+            android:textColorHint="#C51212"
+            android:textColorLink="#E81B1B"
+            app:iconTint="#00BF2D2D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#C33131"
+            app:strokeColor="#BD2020" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="289dp"
+            android:background="@android:color/holo_red_dark"
+            android:backgroundTint="#BF2525"
+            android:foregroundTint="#CC2323"
+            android:text="INSCRIPTION"
+            android:textColor="@android:color/white"
+            android:textColorHighlight="#D81414"
+            android:textColorHint="#C51212"
+            android:textColorLink="#E81B1B"
+            app:iconTint="#00BF2D2D"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#C33131"
+            app:strokeColor="#BD2020" />
+
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nom d'utilisateur : "
+            android:text="Email / Nom d'utilisateur : "
             android:textColor="#050505"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,8 +72,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:hint="Email / Utilisateur"
             android:inputType="textPersonName"
-            android:text="Utilisateur"
             android:textColor="#8C7E7E"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,9 +87,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
+            android:hint="Mot de passe"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            android:text="Mot de passe"
             android:textColor="#8C7E7E"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,11 +106,11 @@
             app:layout_constraintTop_toBottomOf="@+id/user" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/conn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
-            android:background="@android:color/holo_red_dark"
+            android:background="#BF2525"
             android:backgroundTint="#BF2525"
             android:foregroundTint="#CC2323"
             android:text="Connexion"
