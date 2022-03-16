@@ -28,12 +28,16 @@ public class Utilisateurs {
     @ColumnInfo(name = "mdp")
     private String mdp;
 
+    @ColumnInfo(name = "telephone")
+    private String telephone;
 
-    public Utilisateurs(int id, String nom, String prenom, LocalDateTime dateInscription, String email, String mdp) {
+
+    public Utilisateurs(int id, String nom, String prenom, LocalDateTime dateInscription, String email, String mdp,String telephone) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.dateInscription = dateInscription;
+        this.telephone = telephone;
         this.email = email;
         this.mdp = mdp;
     }
@@ -84,5 +88,13 @@ public class Utilisateurs {
 
     public void setMdp(String mdp) {
         this.mdp = mdp;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 }
