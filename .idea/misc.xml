@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/antoi/OneDrive/Bureau/Iut/2eme_Annee_2021_2022-Rekkles-ComputerScript/Semestre_4/Cours/LFLDIRECT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24" />
+        <entry key="..\:/Users/antoi/OneDrive/Bureau/Iut/2eme_Annee_2021_2022-Rekkles-ComputerScript/Semestre_4/Cours/LFLDIRECT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24" />
+        <entry key="..\:/Users/antoi/OneDrive/Bureau/Iut/2eme_Annee_2021_2022-Rekkles-ComputerScript/Semestre_4/Cours/LFLDIRECT/app/src/main/res/drawable/logo_lfl_background.xml" value="0.24" />
+        <entry key="..\:/Users/antoi/OneDrive/Bureau/Iut/2eme_Annee_2021_2022-Rekkles-ComputerScript/Semestre_4/Cours/LFLDIRECT/app/src/main/res/layout/accueil.xml" value="0.12107396149949341" />
+        <entry key="..\:/Users/antoi/OneDrive/Bureau/Iut/2eme_Annee_2021_2022-Rekkles-ComputerScript/Semestre_4/Cours/LFLDIRECT/app/src/main/res/layout/connexion.xml" value="0.1" />
+        <entry key="..\:/Users/antoi/OneDrive/Bureau/Iut/2eme_Annee_2021_2022-Rekkles-ComputerScript/Semestre_4/Cours/LFLDIRECT/app/src/main/res/layout/inscription.xml" value="0.25" />
+        <entry key="..\:/Users/antoi/OneDrive/Bureau/Iut/2eme_Annee_2021_2022-Rekkles-ComputerScript/Semestre_4/Cours/LFLDIRECT/app/src/main/res/mipmap-anydpi-v26/logo_lfl.xml" value="0.2545" />
         <entry key="..\:/Users/tzrph/AndroidStudioProjects/LFLDIRECT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/tzrph/AndroidStudioProjects/LFLDIRECT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/tzrph/AndroidStudioProjects/LFLDIRECT/app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
