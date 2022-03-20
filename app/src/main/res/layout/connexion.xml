@@ -34,7 +34,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:rippleColor="#C33131"
-            app:strokeColor="#BD2020" />
+            app:strokeColor="#BD2020"
+            android:onClick="onClickButtonMdpOublie"/>
 
         <Button
             android:id="@+id/button4"

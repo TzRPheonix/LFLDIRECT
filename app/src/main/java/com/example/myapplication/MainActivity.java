@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,44 +36,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.connexion);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void onClickButtonMdpOublie(View view){
+        Intent startMdpOublieActivity = new Intent(getApplicationContext(),MdpOublieActivity.class);
+        startActivity(startMdpOublieActivity);
+        finish();
+    }
+
+
+
+
     public void onClickButtonInscription(View view){
 
-
-        setContentView(R.layout.inscription);
-
-
-        Button bouttonInscrire = findViewById(R.id.buttonSinscire);
-        bouttonInscrire.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                System.out.println("S'INSCRIRE ----------------");
-
-                EditText viewNomUtilisateurs = findViewById(R.id.editTextTextNomInscription);
-                String nomUtilisateurs = viewNomUtilisateurs.getText().toString();
-
-                EditText viewEmailUtilisateurs = findViewById(R.id.editTextTextEmailAddressInscription);
-                String email = viewEmailUtilisateurs.getText().toString();
-
-
-                EditText viewTelephoneUtilisateurs = findViewById(R.id.editTextPhoneInscription);
-                String telephone = viewTelephoneUtilisateurs.getText().toString();
-
-
-                EditText viewMdpUtilisateurs = findViewById(R.id.editTextTextPasswordInscription);
-                String mdpUtilisateurs = viewMdpUtilisateurs.getText().toString();
-
-                Utilisateurs userAdd = new Utilisateurs(nomUtilisateurs,"Test", LocalDateTime.now().toString(),email,mdpUtilisateurs,telephone);
-
-                System.out.println(userAdd);
-
-                myDatabaseHelper.insert(userAdd);
-
-            }
-        });
-
-
+        Intent startInscriptionActivity = new Intent(getApplicationContext(),InscriptionActivity.class);
+        startActivity(startInscriptionActivity);
+        finish();
 
     }
 
@@ -93,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
         if(utilisateurs.getMdp().equals(mdpUtilisateurs)){
 
-            setContentView(R.layout.accueil);
-
+            Intent startAccueilActivity = new Intent(getApplicationContext(),AccueilActivity.class);
+            startActivity(startAccueilActivity);
+            finish();
 
         }
         else{

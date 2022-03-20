@@ -83,7 +83,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
 
     public Utilisateurs getUsers(String elementConnexion){
 
-        String sql = "Select * from Utilisateurs where nom ='" +elementConnexion +"';";
+        String sql = "Select * from Utilisateurs where nom ='" +elementConnexion +"' or email = '" + elementConnexion +"';";
         @SuppressLint("Recycle") Cursor cursor = getWritableDatabase().rawQuery(sql,null);
 
         int id = -1;
@@ -107,10 +107,6 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
             System.out.println("L'utilisateur n'existe Pas");
         }
         return new Utilisateurs(id,nom,prenom,dateInscription,email,mdp,telephone);
-
-
-
-
     }
 
 
