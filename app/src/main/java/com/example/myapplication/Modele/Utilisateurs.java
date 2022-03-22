@@ -5,6 +5,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Entity(tableName = "Utilisateurs")
@@ -20,7 +21,7 @@ public class Utilisateurs {
     private String prenom;
 
     @ColumnInfo(name = "dateInscription")
-    private LocalDateTime dateInscription;
+    private String dateInscription;
 
     @ColumnInfo(name = "email")
     private String email;
@@ -32,7 +33,16 @@ public class Utilisateurs {
     private String telephone;
 
 
-    public Utilisateurs(int id, String nom, String prenom, LocalDateTime dateInscription, String email, String mdp,String telephone) {
+    public Utilisateurs(String nom, String prenom, String dateInscription, String email, String mdp, String telephone) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dateInscription = dateInscription;
+        this.telephone = telephone;
+        this.email = email;
+        this.mdp = mdp;
+    }
+
+    public Utilisateurs(int id, String nom, String prenom, String dateInscription, String email, String mdp, String telephone) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -66,11 +76,11 @@ public class Utilisateurs {
         this.prenom = prenom;
     }
 
-    public LocalDateTime getDateInscription() {
+    public String getDateInscription() {
         return dateInscription;
     }
 
-    public void setDateInscription(LocalDateTime dateInscription) {
+    public void setDateInscription(String dateInscription) {
         this.dateInscription = dateInscription;
     }
 
@@ -96,5 +106,18 @@ public class Utilisateurs {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    @Override
+    public String toString() {
+        return "Utilisateurs{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", dateInscription='" + dateInscription + '\'' +
+                ", email='" + email + '\'' +
+                ", mdp='" + mdp + '\'' +
+                ", telephone='" + telephone + '\'' +
+                '}';
     }
 }
