@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -68,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
             else{
                 System.out.println("La connexion a échoué :( ");
             }
+        }else{
+            Toast T = Toast.makeText(getApplicationContext(),"Veuillez vérifiez votre saisie",Toast.LENGTH_SHORT);
+            T.show();
         }
         
 

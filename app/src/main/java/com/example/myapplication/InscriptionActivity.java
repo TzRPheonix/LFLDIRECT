@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -24,6 +25,12 @@ public class InscriptionActivity extends AppCompatActivity {
 
         setContentView(R.layout.inscription);
 
+    }
+
+    public void onClickRetour(View view){
+        Intent retour = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(retour);
+        finish();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)

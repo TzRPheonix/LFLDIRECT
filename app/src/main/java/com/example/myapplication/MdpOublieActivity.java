@@ -26,6 +26,12 @@ public class MdpOublieActivity extends AppCompatActivity {
 
     }
 
+    public void onClickRetour(View view){
+        Intent retour = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(retour);
+        finish();
+    }
+
     public void onClickButtonMail(View view){
 
         EditText editText = findViewById(R.id.editTextEmailMdpOublie);
