@@ -83,7 +83,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
 
     public Utilisateurs getUsers(String elementConnexion){
 
-        String sql = "Select * from Utilisateurs where nom ='" +elementConnexion +"' or email = '" + elementConnexion +"';";
+        String sql = "Select * from Utilisateurs where nom ='" +elementConnexion +"';";
         @SuppressLint("Recycle") Cursor cursor = getWritableDatabase().rawQuery(sql,null);
 
         int id = -1;
@@ -95,18 +95,22 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
         String telephone= null;
 
         if (cursor.moveToFirst()){
-             id = cursor.getInt(0);
-             nom = cursor.getString(1);
-             prenom = cursor.getString(2);
-             dateInscription = cursor.getString(3);
-             email = cursor.getString(4);
-             mdp = cursor.getString(5);
-             telephone = cursor.getString(6);
+            id = cursor.getInt(0);
+            nom = cursor.getString(1);
+            prenom = cursor.getString(2);
+            dateInscription = cursor.getString(3);
+            email = cursor.getString(4);
+            mdp = cursor.getString(5);
+            telephone = cursor.getString(6);
         }
         else{
             System.out.println("L'utilisateur n'existe Pas");
         }
         return new Utilisateurs(id,nom,prenom,dateInscription,email,mdp,telephone);
+
+
+
+
     }
 
 
