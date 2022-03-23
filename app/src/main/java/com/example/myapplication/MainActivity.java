@@ -68,16 +68,19 @@ public class MainActivity extends AppCompatActivity {
         Utilisateurs utilisateurs = myDatabaseHelper.getUsers(nomUtilisateurs);
         System.out.println(utilisateurs.getNom());
 
-        if(utilisateurs.getMdp().equals(mdpUtilisateurs)){
+        if (utilisateurs.getId() != -1){
+            if(utilisateurs.getMdp().equals(mdpUtilisateurs) && nomUtilisateurs.equals(utilisateurs.getNom())){
 
-            Intent startAccueilActivity = new Intent(getApplicationContext(),AccueilActivity.class);
-            startActivity(startAccueilActivity);
-            finish();
+                Intent startAccueilActivity = new Intent(getApplicationContext(),AccueilActivity.class);
+                startActivity(startAccueilActivity);
+                finish();
 
+            }
+            else{
+                System.out.println("La connexion a échoué :( ");
+            }
         }
-        else{
-            System.out.println("La connexion a échoué :( ");
-        }
+        
 
 
     }

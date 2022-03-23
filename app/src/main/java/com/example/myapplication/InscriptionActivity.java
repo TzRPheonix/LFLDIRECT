@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -49,6 +50,10 @@ public class InscriptionActivity extends AppCompatActivity {
         System.out.println(userAdd);
 
         myDatabaseHelper.insert(userAdd);
+
+        Intent connexionActivity = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(connexionActivity);
+        finish();
 
     }
 }

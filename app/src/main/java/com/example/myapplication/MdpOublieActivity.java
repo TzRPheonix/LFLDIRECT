@@ -32,6 +32,7 @@ public class MdpOublieActivity extends AppCompatActivity {
         String email = editText.getText().toString();
 
         Utilisateurs utilisateurs = myDatabaseHelper.getUsers(email);
+
         if (utilisateurs != null){
 
             System.out.println("Le mot de passe de votre compte ("+ email +"):" +utilisateurs.getMdp());
