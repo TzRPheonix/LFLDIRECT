@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
@@ -53,14 +54,17 @@ public class InscriptionActivity extends AppCompatActivity {
         String mdpUtilisateurs = viewMdpUtilisateurs.getText().toString();
 
         Utilisateurs userAdd = new Utilisateurs(nomUtilisateurs,"Test", LocalDateTime.now().toString(),email,mdpUtilisateurs,telephone);
-
+        if(!userAdd.getMdp().isEmpty() && !userAdd.getNom().isEmpty() && !userAdd.getEmail().isEmpty() && !userAdd.getMdp().isEmpty()){
+            myDatabaseHelper.insert(userAdd);
+            Intent connexionActivity = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(connexionActivity);
+            finish();
+        }else{
+            Toast T = Toast.makeText(getApplicationContext(),"Veuillez vérifiez votre saisie",Toast.LENGTH_SHORT);
+            T.show();
+        }
         System.out.println(userAdd);
-
-        myDatabaseHelper.insert(userAdd);
-
-        Intent connexionActivity = new Intent(getApplicationContext(),MainActivity.class);
-        startActivity(connexionActivity);
-        finish();
+        System.out.println(userAdd.getMdp());
 
     }
 }
