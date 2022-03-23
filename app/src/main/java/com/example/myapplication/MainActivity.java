@@ -1,37 +1,26 @@
 package com.example.myapplication;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
 
-import com.example.myapplication.BDD.MyDataBaseHelper;
+import com.example.myapplication.BDD.MyDatabaseHelper;
 import com.example.myapplication.Modele.Utilisateurs;
-
-import java.time.LocalDateTime;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private final MyDataBaseHelper myDatabaseHelper = new MyDataBaseHelper(this);
+    private final MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setTitle("LFL Direct");
-
-        int a = 1;
-        System.out.println("66666666666666666666666666666666666666666666" + myDatabaseHelper.getUsers("caudron"));
-
-
 
         setContentView(R.layout.connexion);
     }

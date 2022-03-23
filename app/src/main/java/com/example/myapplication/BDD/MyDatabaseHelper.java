@@ -10,7 +10,7 @@ import com.example.myapplication.Modele.Utilisateurs;
 
 import java.util.List;
 
-public class MyDataBaseHelper extends SQLiteOpenHelper {
+public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String COLUMN_NOTE_ID ="Id";
     private static final String COLUMN_NOTE_NOM ="nom";
@@ -24,7 +24,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
 
 // ....
 
-    public MyDataBaseHelper(Context context) {
+    public MyDatabaseHelper(Context context) {
         super(context, "db_LFLDIRECT", null, 1);
     }
 
@@ -83,7 +83,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
 
     public Utilisateurs getUsers(String elementConnexion){
 
-        String sql = "Select * from Utilisateurs where nom ='" +elementConnexion +"';";
+        String sql = "Select * from Utilisateurs where nom ='" +elementConnexion +"' or email='"+elementConnexion+"';";
         @SuppressLint("Recycle") Cursor cursor = getWritableDatabase().rawQuery(sql,null);
 
         int id = -1;

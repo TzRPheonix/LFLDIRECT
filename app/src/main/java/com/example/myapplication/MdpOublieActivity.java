@@ -11,13 +11,13 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.BDD.MyDataBaseHelper;
+import com.example.myapplication.BDD.MyDatabaseHelper;
 import com.example.myapplication.Modele.Utilisateurs;
 import com.example.myapplication.ServiceMail.SendEmailService;
 
 public class MdpOublieActivity extends AppCompatActivity {
 
-    private final MyDataBaseHelper myDatabaseHelper = new MyDataBaseHelper(this);
+    private final MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(this);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,6 +41,7 @@ public class MdpOublieActivity extends AppCompatActivity {
                 @RequiresApi(api = Build.VERSION_CODES.O)
                 @Override
                 public void run() {
+                    System.out.println("TESTTT");
                     SendEmailService.getInstance(getApplicationContext()).SendEmail(email,utilisateurs);
                     Intent startConnexionActivity = new Intent(getApplicationContext(),MainActivity.class);
                     startActivity(startConnexionActivity);

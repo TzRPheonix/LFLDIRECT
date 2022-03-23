@@ -10,13 +10,13 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.BDD.MyDataBaseHelper;
+import com.example.myapplication.BDD.MyDatabaseHelper;
 import com.example.myapplication.Modele.Utilisateurs;
 
 import java.time.LocalDateTime;
 
 public class InscriptionActivity extends AppCompatActivity {
-    private final MyDataBaseHelper myDatabaseHelper = new MyDataBaseHelper(this);
+    private final MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(this);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
