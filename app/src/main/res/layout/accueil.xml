@@ -7,6 +7,8 @@
     android:orientation="vertical"
     >
 
+
+
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="195dp"
@@ -23,7 +25,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoKarmine">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,7 +57,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoMP">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -69,10 +73,13 @@
                         android:layout_marginTop="10dp"
                         android:text="Misfits premier"
                         android:textSize="20sp" />
+
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/mplogo"></ImageView>
+                        android:layout_width="178dp"
+                        android:layout_height="112dp"
+                        android:src="@drawable/mplogo">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -83,7 +90,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoVB">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -101,7 +109,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/vitalogo"></ImageView>
+                        android:src="@drawable/vitalogo">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -112,7 +122,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoS">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -127,10 +138,13 @@
                         android:layout_marginTop="10dp"
                         android:text="Solary"
                         android:textSize="20sp" />
+
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/solary"></ImageView>
+                        android:layout_width="130dp"
+                        android:layout_height="109dp"
+                        android:src="@drawable/solary">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -141,7 +155,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoldlc">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -159,7 +174,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ldlc"></ImageView>
+                        android:src="@drawable/ldlc">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -170,7 +187,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoBDS">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -188,7 +206,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/bdsaca"></ImageView>
+                        android:src="@drawable/bdsaca">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -199,7 +219,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoGW">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -217,7 +238,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/gw"></ImageView>
+                        android:src="@drawable/gw">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -228,7 +251,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoGO">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -247,7 +271,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/logogo"></ImageView>
+                        android:src="@drawable/logogo">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -258,7 +284,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoTO">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -276,7 +303,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/logooplon"></ImageView>
+                        android:src="@drawable/logooplon">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -287,7 +316,8 @@
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp">
+                app:cardElevation="10dp"
+                android:onClick="OnClickInfoME">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -305,7 +335,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/melogo"></ImageView>
+                        android:src="@drawable/melogo">
+
+                    </ImageView>
 
                 </LinearLayout>
 
@@ -313,6 +345,10 @@
         </LinearLayout>
 
     </HorizontalScrollView>
-
+    <include
+        android:id="@+id/app_bar_main"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
