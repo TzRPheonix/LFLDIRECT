@@ -24,6 +24,7 @@
             android:background="@android:color/holo_red_dark"
             android:backgroundTint="#BF2525"
             android:foregroundTint="#CC2323"
+            android:onClick="onClickButtonMdpOublie"
             android:text="MDP OUBLIE"
             android:textColor="@android:color/white"
             android:textColorHighlight="#D81414"
@@ -34,8 +35,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:rippleColor="#C33131"
-            app:strokeColor="#BD2020"
-            android:onClick="onClickButtonMdpOublie"/>
+            app:strokeColor="#BD2020" />
 
         <Button
             android:id="@+id/button4"
@@ -45,6 +45,7 @@
             android:background="@android:color/holo_red_dark"
             android:backgroundTint="#BF2525"
             android:foregroundTint="#CC2323"
+            android:onClick="onClickButtonInscription"
             android:text="INSCRIPTION"
             android:textColor="@android:color/white"
             android:textColorHighlight="#D81414"
@@ -56,8 +57,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:rippleColor="#C33131"
-            app:strokeColor="#BD2020"
-            android:onClick="onClickButtonInscription"/>
+            app:strokeColor="#BD2020" />
 
         <TextView
             android:id="@+id/textView4"
@@ -115,6 +115,7 @@
             android:background="#BF2525"
             android:backgroundTint="#BF2525"
             android:foregroundTint="#CC2323"
+            android:onClick="onClickButtonConnexion"
             android:text="Connexion"
             android:textColor="@android:color/white"
             android:textColorHighlight="#D81414"
@@ -125,8 +126,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
             app:rippleColor="#C33131"
-            app:strokeColor="#BD2020"
-            android:onClick="onClickButtonConnexion"/>
+            app:strokeColor="#BD2020" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -142,5 +142,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="90dp"
+        android:text="reset"
+        android:onClick="onClickButtonReset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

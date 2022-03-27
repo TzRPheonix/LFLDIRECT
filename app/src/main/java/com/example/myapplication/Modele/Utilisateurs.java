@@ -17,8 +17,8 @@ public class Utilisateurs {
     @ColumnInfo(name = "nom")
     private String nom;
 
-    @ColumnInfo(name = "prenom")
-    private String prenom;
+    @ColumnInfo(name = "pseudo")
+    private String pseudo;
 
     @ColumnInfo(name = "dateInscription")
     private String dateInscription;
@@ -33,19 +33,19 @@ public class Utilisateurs {
     private String telephone;
 
 
-    public Utilisateurs(String nom, String prenom, String dateInscription, String email, String mdp, String telephone) {
+    public Utilisateurs(String nom, String pseudo, String dateInscription, String email, String mdp, String telephone) {
         this.nom = nom;
-        this.prenom = prenom;
+        this.pseudo = pseudo;
         this.dateInscription = dateInscription;
         this.telephone = telephone;
         this.email = email;
         this.mdp = mdp;
     }
 
-    public Utilisateurs(int id, String nom, String prenom, String dateInscription, String email, String mdp, String telephone) {
+    public Utilisateurs(int id, String nom, String pseudo, String dateInscription, String email, String mdp, String telephone) {
         this.id = id;
         this.nom = nom;
-        this.prenom = prenom;
+        this.pseudo = pseudo;
         this.dateInscription = dateInscription;
         this.telephone = telephone;
         this.email = email;
@@ -68,12 +68,12 @@ public class Utilisateurs {
         this.nom = nom;
     }
 
-    public String getPrenom() {
-        return prenom;
+    public String getPseudo() {
+        return pseudo;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public void setPseudo(String pseudo) {
+        this.pseudo = pseudo;
     }
 
     public String getDateInscription() {
@@ -113,7 +113,7 @@ public class Utilisateurs {
         return "Utilisateurs{" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
+                ", prenom='" + pseudo + '\'' +
                 ", dateInscription='" + dateInscription + '\'' +
                 ", email='" + email + '\'' +
                 ", mdp='" + mdp + '\'' +
