@@ -19,7 +19,7 @@ public interface DAOUtilisateurs {
     @Query("SELECT * FROM Utilisateurs WHERE id IN (:userIds)")
     List<Utilisateurs> loadAllByIds(int[] userIds);
 
-    @Query("SELECT * FROM Utilisateurs WHERE prenom LIKE :first AND " +
+    @Query("SELECT * FROM Utilisateurs WHERE pseudo LIKE :first AND " +
             "nom LIKE :last LIMIT 1")
     Utilisateurs findByName(String first, String last);
 

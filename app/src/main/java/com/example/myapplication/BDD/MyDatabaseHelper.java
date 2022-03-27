@@ -21,7 +21,6 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_NOTE_TELEPHONE ="telephone";
 
 
-
 // ....
 
     public MyDatabaseHelper(Context context) {

@@ -6,6 +6,20 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/boutonRetour4"
+        android:layout_width="53dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="33dp"
+        android:onClick="onClickRetour"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bouton_retour"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="114dp"
         android:layout_height="94dp"
@@ -182,6 +196,17 @@
         android:text="Hanterra"
         app:layout_constraintStart_toEndOf="@+id/imageView19"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onClickMatch"
+        android:text="MATCH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
