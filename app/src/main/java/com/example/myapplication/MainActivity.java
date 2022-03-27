@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void onClickButtonReset(View view){
+        SQLiteDatabase md = myDatabaseHelper.getReadableDatabase();
+        myDatabaseHelper.onUpgrade(md,0,1);
+    }
+
 
 
 
@@ -54,12 +60,11 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Test : " + nomUtilisateurs);
         System.out.println("Test : " + mdpUtilisateurs);
 
-
         Utilisateurs utilisateurs = myDatabaseHelper.getUsers(nomUtilisateurs);
         System.out.println(utilisateurs.getNom());
 
         if (utilisateurs.getId() != -1){
-            if(utilisateurs.getMdp().equals(mdpUtilisateurs) && nomUtilisateurs.equals(utilisateurs.getNom())){
+            if(utilisateurs.getMdp().equals(mdpUtilisateurs) && nomUtilisateurs.equals(utilisateurs.getPseudo()) || nomUtilisateurs.equals(utilisateurs.getEmail())){
 
                 Intent startAccueilActivity = new Intent(getApplicationContext(),AccueilActivity.class);
                 startActivity(startAccueilActivity);
@@ -73,8 +78,5 @@ public class MainActivity extends AppCompatActivity {
             Toast T = Toast.makeText(getApplicationContext(),"Veuillez vérifiez votre saisie",Toast.LENGTH_SHORT);
             T.show();
         }
-        
-
-
     }
 }

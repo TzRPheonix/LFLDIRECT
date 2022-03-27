@@ -5,7 +5,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -42,8 +41,12 @@ public class InscriptionActivity extends AppCompatActivity {
         EditText viewNomUtilisateurs = findViewById(R.id.editTextTextNomInscription);
         String nomUtilisateurs = viewNomUtilisateurs.getText().toString();
 
-        EditText viewEmailUtilisateurs = findViewById(R.id.editTextTextEmailAddressInscription);
+
+        EditText viewEmailUtilisateurs = findViewById(R.id.editTextTextEmailAddressInscription2);
         String email = viewEmailUtilisateurs.getText().toString();
+
+        EditText viewPseudoUtilisateur = findViewById(R.id.editUser);
+        String pseudo = viewPseudoUtilisateur.getText().toString();
 
 
         EditText viewTelephoneUtilisateurs = findViewById(R.id.editTextPhoneInscription);
@@ -53,8 +56,8 @@ public class InscriptionActivity extends AppCompatActivity {
         EditText viewMdpUtilisateurs = findViewById(R.id.editTextTextPasswordInscription);
         String mdpUtilisateurs = viewMdpUtilisateurs.getText().toString();
 
-        Utilisateurs userAdd = new Utilisateurs(nomUtilisateurs,"Test", LocalDateTime.now().toString(),email,mdpUtilisateurs,telephone);
-        if(!userAdd.getMdp().isEmpty() && !userAdd.getNom().isEmpty() && !userAdd.getEmail().isEmpty() && !userAdd.getMdp().isEmpty()){
+        Utilisateurs userAdd = new Utilisateurs(nomUtilisateurs,pseudo, LocalDateTime.now().toString(),email,mdpUtilisateurs,telephone);
+        if(!userAdd.getMdp().isEmpty() && !userAdd.getNom().isEmpty() && !userAdd.getEmail().isEmpty() && !userAdd.getTelephone().isEmpty() && !userAdd.getPseudo().isEmpty() && userAdd.getEmail().contains("@") && userAdd.getTelephone().length() == 10){
             myDatabaseHelper.insert(userAdd);
             Intent connexionActivity = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(connexionActivity);
