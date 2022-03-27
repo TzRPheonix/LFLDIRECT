@@ -14,7 +14,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String COLUMN_NOTE_ID ="Id";
     private static final String COLUMN_NOTE_NOM ="nom";
-    private static final String COLUMN_NOTE_PRENOM = "prenom";
+    private static final String COLUMN_NOTE_PSEUDO = "pseudo";
     private static final String COLUMN_NOTE_DATEINSCRIPTION ="dateInscription";
     private static final String COLUMN_NOTE_EMAIL ="email";
     private static final String COLUMN_NOTE_MDP = "mdp";
@@ -36,7 +36,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
         String script = "CREATE TABLE IF NOT EXISTS " + "Utilisateurs" + "("
                 + COLUMN_NOTE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_NOTE_NOM + " TEXT,"
-                + COLUMN_NOTE_PRENOM + " TEXT,"+ COLUMN_NOTE_DATEINSCRIPTION+ " TEXT," + COLUMN_NOTE_EMAIL + " TEXT," + COLUMN_NOTE_MDP + " TEXT," + COLUMN_NOTE_TELEPHONE + " TEXT"+ ")" ;
+                + COLUMN_NOTE_PSEUDO + " TEXT,"+ COLUMN_NOTE_DATEINSCRIPTION+ " TEXT," + COLUMN_NOTE_EMAIL + " TEXT," + COLUMN_NOTE_MDP + " TEXT," + COLUMN_NOTE_TELEPHONE + " TEXT"+ ")" ;
         // Execute script.
         db.execSQL(script);
     }
@@ -76,19 +76,19 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     public void insert(Utilisateurs user) {
 
-        String sql = "INSERT INTO Utilisateurs (nom, prenom, dateInscription, email, mdp, telephone) VALUES('" + user.getNom() + "', '" + user.getPrenom() + "', '" + user.getDateInscription() + "', '" + user.getEmail() + "', '" + user.getMdp() +  "' ,'" + user.getTelephone() +  "')" ;
+        String sql = "INSERT INTO Utilisateurs (nom, pseudo, dateInscription, email, mdp, telephone) VALUES('" + user.getNom() + "', '" + user.getPseudo() + "', '" + user.getDateInscription() + "', '" + user.getEmail() + "', '" + user.getMdp() +  "' ,'" + user.getTelephone() +  "')" ;
         getWritableDatabase().execSQL(sql);
     }
 
 
     public Utilisateurs getUsers(String elementConnexion){
 
-        String sql = "Select * from Utilisateurs where nom ='" +elementConnexion +"' or email='"+elementConnexion+"';";
+        String sql = "Select * from Utilisateurs where pseudo ='" +elementConnexion +"' or email='"+elementConnexion+"';";
         @SuppressLint("Recycle") Cursor cursor = getWritableDatabase().rawQuery(sql,null);
 
         int id = -1;
         String nom = null;
-        String prenom = null;
+        String pseudo = null;
         String dateInscription = null;
         String email= null;
         String mdp= null;
@@ -97,7 +97,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()){
             id = cursor.getInt(0);
             nom = cursor.getString(1);
-            prenom = cursor.getString(2);
+            pseudo = cursor.getString(2);
             dateInscription = cursor.getString(3);
             email = cursor.getString(4);
             mdp = cursor.getString(5);
@@ -106,13 +106,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         else{
             System.out.println("L'utilisateur n'existe Pas");
         }
-        return new Utilisateurs(id,nom,prenom,dateInscription,email,mdp,telephone);
-
-
-
-
+        return new Utilisateurs(id,nom,pseudo,dateInscription,email,mdp,telephone);
     }
-
 
 
     public void delete(Utilisateurs user) {
