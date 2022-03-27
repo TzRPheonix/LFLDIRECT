@@ -42,6 +42,7 @@ dependencies {
     implementation 'androidx.room:room-common:2.4.2'
     implementation fileTree(dir: 'app/src/main/java/com/example/myapplication/lib', include: ['*.aar', '*.jar'], exclude: [])
     implementation fileTree(dir: 'C:\\Users\\DA MOTA MARQUES\\AndroidStudioProjects\\LFLDIRECT\\app\\src\\main\\java\\com\\example\\myapplication\\lib', include: ['*.aar', '*.jar'], exclude: [])
+    implementation fileTree(dir: 'C:\\Users\\antoi\\OneDrive\\Bureau\\Iut\\2eme_Annee_2021_2022-Rekkles-ComputerScript\\Semestre_4\\Cours\\LFLDIRECT\\app\\src\\main\\java\\com\\example\\myapplication\\lib', include: ['*.aar', '*.jar'], exclude: [])
     testImplementation 'junit:junit:4.13.2'
 
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
