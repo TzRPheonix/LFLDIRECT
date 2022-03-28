@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             }
             else{
                 System.out.println("La connexion a échoué :( ");
+                Toast T = Toast.makeText(getApplicationContext(),"Veuillez vérifiez votre saisie",Toast.LENGTH_SHORT);
+                T.show();
             }
         }else{
             Toast T = Toast.makeText(getApplicationContext(),"Veuillez vérifiez votre saisie",Toast.LENGTH_SHORT);

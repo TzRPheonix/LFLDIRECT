@@ -12,7 +12,7 @@ import java.util.List;
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String COLUMN_NOTE_ID ="Id";
+    private static final String COLUMN_NOTE_ID ="id";
     private static final String COLUMN_NOTE_NOM ="nom";
     private static final String COLUMN_NOTE_PSEUDO = "pseudo";
     private static final String COLUMN_NOTE_DATEINSCRIPTION ="dateInscription";
@@ -79,6 +79,13 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         String sql = "INSERT INTO Utilisateurs (nom, pseudo, dateInscription, email, mdp, telephone, avote) VALUES('" + user.getNom() + "', '" + user.getPseudo() + "', '" + user.getDateInscription() + "', '" + user.getEmail() + "', '" + user.getMdp() +  "' ,'" + user.getTelephone() + "' ,'" + user.getAvote() + "')" ;
         getWritableDatabase().execSQL(sql);
     }
+
+    public void modify(Utilisateurs user) {
+        String sql = "UPDATE Utilisateurs SET avote = 'oui' WHERE id = 1";
+        getWritableDatabase().execSQL(sql);
+    }
+
+
 
 
     public Utilisateurs getUsers(String elementConnexion){

@@ -13,6 +13,7 @@ import com.example.myapplication.MainActivity;
 import com.example.myapplication.Modele.Utilisateurs;
 import com.example.myapplication.R;
 import com.example.myapplication.matchK;
+import com.example.myapplication.newsK;
 
 public class Karminepage extends AppCompatActivity {
 
@@ -27,6 +28,12 @@ public class Karminepage extends AppCompatActivity {
 
     public void onClickMatch(View view){
         Intent retour = new Intent(getApplicationContext(), matchK.class);
+        startActivity(retour);
+        finish();
+    }
+
+    public void onClickNews(View view){
+        Intent retour = new Intent(getApplicationContext(), newsK.class);
         startActivity(retour);
         finish();
     }
