@@ -8,6 +8,16 @@
     >
 
 
+    <ImageView
+        android:id="@+id/boutonRetour6"
+        android:layout_width="64dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:onClick="onClickRetour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bouton_retour"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -24,17 +34,15 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoKarmine"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoKarmine">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    >
-
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -43,6 +51,7 @@
                         android:layout_marginTop="10dp"
                         android:text="Karmine Corp"
                         android:textSize="20sp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -56,9 +65,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoMP"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoMP">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -89,9 +98,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoVB"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoVB">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -106,6 +115,7 @@
                         android:layout_marginTop="10dp"
                         android:text="Vitality.bee"
                         android:textSize="20sp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -121,9 +131,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoS"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoS">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -154,9 +164,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoldlc"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoldlc">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -171,6 +181,7 @@
                         android:layout_marginTop="10dp"
                         android:text="LDLC OL"
                         android:textSize="20sp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -186,9 +197,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoBDS"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoBDS">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -203,6 +214,7 @@
                         android:layout_marginTop="10dp"
                         android:text="BDS Academy "
                         android:textSize="20sp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -218,9 +230,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoGW"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoGW">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -235,6 +247,7 @@
                         android:layout_marginTop="10dp"
                         android:text="GAMEWARD"
                         android:textSize="20sp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -250,9 +263,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoGO"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoGO">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -261,13 +274,13 @@
                     android:orientation="vertical">
 
 
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="GAMERSORIGIN"
                         android:textSize="20sp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -283,9 +296,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoTO"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoTO">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -300,6 +313,7 @@
                         android:layout_marginTop="10dp"
                         android:text="Team Oplon"
                         android:textSize="20sp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -315,9 +329,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_margin="20dp"
+                android:onClick="OnClickInfoME"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
-                android:onClick="OnClickInfoME">
+                app:cardElevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -332,6 +346,7 @@
                         android:layout_marginTop="10dp"
                         android:text="Mirage Elyandra"
                         android:textSize="20sp" />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -345,6 +360,11 @@
         </LinearLayout>
 
     </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"></LinearLayout>
 
 
 </LinearLayout>

@@ -92,4 +92,10 @@ public class AccueilActivity extends AppCompatActivity {
         startActivity(startMEpage);
         onPause();
     }
+
+    public void onClickRetour(View view){
+        Intent retour = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(retour);
+        finish();
+    }
 }
