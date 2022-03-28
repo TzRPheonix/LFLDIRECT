@@ -18,7 +18,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class SendEmailService  {
+public class SendEmailService  { // Caudron
 
     private static SendEmailService instance = null;
     private static Context ctx;

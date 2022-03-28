@@ -10,7 +10,7 @@ import com.example.myapplication.Modele.Utilisateurs;
 
 import java.util.List;
 
-public class MyDatabaseHelper extends SQLiteOpenHelper {
+public class MyDatabaseHelper extends SQLiteOpenHelper { //Caudron
 
     private static final String COLUMN_NOTE_ID ="id";
     private static final String COLUMN_NOTE_NOM ="nom";

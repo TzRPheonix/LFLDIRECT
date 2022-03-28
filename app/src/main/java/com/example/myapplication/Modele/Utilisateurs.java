@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Entity(tableName = "Utilisateurs")
-public class Utilisateurs {
+public class Utilisateurs { //Caudron
 
     @PrimaryKey
     private int id;

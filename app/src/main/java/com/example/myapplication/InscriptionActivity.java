@@ -16,7 +16,7 @@ import com.example.myapplication.Modele.Utilisateurs;
 
 import java.time.LocalDateTime;
 
-public class InscriptionActivity extends AppCompatActivity {
+public class InscriptionActivity extends AppCompatActivity { //Caudron = bdd / axel = gestion des erreurs / Yorann = xml
     private final MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(this);
 
     @Override

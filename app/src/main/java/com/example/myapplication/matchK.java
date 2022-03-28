@@ -18,7 +18,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.navigation.NavigationView;
 
-public class matchK extends AppCompatActivity {
+public class matchK extends AppCompatActivity { //Axel
     private int i = 0;
     private int j = 0;
     private Boolean avote = false;

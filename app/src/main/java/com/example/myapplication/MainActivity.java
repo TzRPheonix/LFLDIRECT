@@ -13,7 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import com.example.myapplication.BDD.MyDatabaseHelper;
 import com.example.myapplication.Modele.Utilisateurs;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity { //Caudron = bdd / axel = gestion des erreurs
 
     private AppBarConfiguration mAppBarConfiguration;
     private final MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(this);
@@ -81,4 +81,6 @@ public class MainActivity extends AppCompatActivity {
             T.show();
         }
     }
+
+    //redemandez le mdp
 }

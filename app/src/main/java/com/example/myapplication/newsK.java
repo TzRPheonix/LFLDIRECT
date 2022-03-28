@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myapplication.TEAM.Karminepage;
 import com.google.android.gms.maps.MapView;
 
-public class newsK extends AppCompatActivity {
+public class newsK extends AppCompatActivity {  //Axel
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

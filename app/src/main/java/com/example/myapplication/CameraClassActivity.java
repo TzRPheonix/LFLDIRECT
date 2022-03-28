@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CameraClassActivity extends AppCompatActivity {
+public class CameraClassActivity extends AppCompatActivity { // Caudron
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
 

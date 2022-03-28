@@ -16,7 +16,7 @@ import com.example.myapplication.BDD.MyDatabaseHelper;
 import com.example.myapplication.Modele.Utilisateurs;
 import com.example.myapplication.ServiceMail.SendEmailService;
 
-public class MdpOublieActivity extends AppCompatActivity {
+public class MdpOublieActivity extends AppCompatActivity { //Caudron = bdd / axel = gestion des erreurs
 
     private final MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(this);
 

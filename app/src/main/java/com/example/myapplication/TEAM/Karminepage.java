@@ -15,7 +15,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.matchK;
 import com.example.myapplication.newsK;
 
-public class Karminepage extends AppCompatActivity {
+public class Karminepage extends AppCompatActivity { //Caudron = style / Axel = action sur les boutons
 
 
     @Override

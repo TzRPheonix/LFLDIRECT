@@ -19,7 +19,7 @@ import com.example.myapplication.TEAM.Spage;
 import com.example.myapplication.TEAM.TOpage;
 import com.example.myapplication.TEAM.VBpage;
 
-public class AccueilActivity extends AppCompatActivity {
+public class AccueilActivity extends AppCompatActivity { //Esteban
 
 
     @Override
