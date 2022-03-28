@@ -32,17 +32,22 @@ public class Utilisateurs {
     @ColumnInfo(name = "telephone")
     private String telephone;
 
+    @ColumnInfo(name = "avote")
+    private String avote;
 
-    public Utilisateurs(String nom, String pseudo, String dateInscription, String email, String mdp, String telephone) {
+
+
+    public Utilisateurs(String nom, String pseudo, String dateInscription, String email, String mdp, String telephone,String avote) {
         this.nom = nom;
         this.pseudo = pseudo;
         this.dateInscription = dateInscription;
         this.telephone = telephone;
         this.email = email;
         this.mdp = mdp;
+        this.avote = avote;
     }
 
-    public Utilisateurs(int id, String nom, String pseudo, String dateInscription, String email, String mdp, String telephone) {
+    public Utilisateurs(int id, String nom, String pseudo, String dateInscription, String email, String mdp, String telephone, String avote) {
         this.id = id;
         this.nom = nom;
         this.pseudo = pseudo;
@@ -50,6 +55,7 @@ public class Utilisateurs {
         this.telephone = telephone;
         this.email = email;
         this.mdp = mdp;
+        this.avote = avote;
     }
 
     public int getId() {
@@ -108,6 +114,14 @@ public class Utilisateurs {
         this.telephone = telephone;
     }
 
+    public String getAvote() {
+        return avote;
+    }
+
+    public void setAvote(String avote) {
+        this.avote = avote;
+    }
+
     @Override
     public String toString() {
         return "Utilisateurs{" +
@@ -118,6 +132,7 @@ public class Utilisateurs {
                 ", email='" + email + '\'' +
                 ", mdp='" + mdp + '\'' +
                 ", telephone='" + telephone + '\'' +
+                ", avote='" + avote + '\'' +
                 '}';
     }
 }

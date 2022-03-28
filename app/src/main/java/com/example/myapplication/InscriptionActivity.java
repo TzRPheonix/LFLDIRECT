@@ -56,7 +56,8 @@ public class InscriptionActivity extends AppCompatActivity {
         EditText viewMdpUtilisateurs = findViewById(R.id.editTextTextPasswordInscription);
         String mdpUtilisateurs = viewMdpUtilisateurs.getText().toString();
 
-        Utilisateurs userAdd = new Utilisateurs(nomUtilisateurs,pseudo, LocalDateTime.now().toString(),email,mdpUtilisateurs,telephone);
+        String avote = "non";
+        Utilisateurs userAdd = new Utilisateurs(nomUtilisateurs,pseudo,LocalDateTime.now().toString(),email,mdpUtilisateurs,telephone,avote);
         if(!userAdd.getMdp().isEmpty() && !userAdd.getNom().isEmpty() && !userAdd.getEmail().isEmpty() && !userAdd.getTelephone().isEmpty() && !userAdd.getPseudo().isEmpty() && userAdd.getEmail().contains("@") && userAdd.getTelephone().length() == 10){
             myDatabaseHelper.insert(userAdd);
             Intent connexionActivity = new Intent(getApplicationContext(),MainActivity.class);

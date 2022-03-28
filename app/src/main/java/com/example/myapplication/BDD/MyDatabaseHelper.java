@@ -19,6 +19,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_NOTE_EMAIL ="email";
     private static final String COLUMN_NOTE_MDP = "mdp";
     private static final String COLUMN_NOTE_TELEPHONE ="telephone";
+    private static final String COLUMN_NOTE_AVOTE ="avote";
 
 
 // ....
@@ -35,7 +36,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
         String script = "CREATE TABLE IF NOT EXISTS " + "Utilisateurs" + "("
                 + COLUMN_NOTE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_NOTE_NOM + " TEXT,"
-                + COLUMN_NOTE_PSEUDO + " TEXT,"+ COLUMN_NOTE_DATEINSCRIPTION+ " TEXT," + COLUMN_NOTE_EMAIL + " TEXT," + COLUMN_NOTE_MDP + " TEXT," + COLUMN_NOTE_TELEPHONE + " TEXT"+ ")" ;
+                + COLUMN_NOTE_PSEUDO + " TEXT,"+ COLUMN_NOTE_DATEINSCRIPTION+ " TEXT," + COLUMN_NOTE_EMAIL + " TEXT," + COLUMN_NOTE_MDP + " TEXT," + COLUMN_NOTE_TELEPHONE + " TEXT,"+ COLUMN_NOTE_AVOTE + ")" ;
         // Execute script.
         db.execSQL(script);
     }
@@ -75,7 +76,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     public void insert(Utilisateurs user) {
 
-        String sql = "INSERT INTO Utilisateurs (nom, pseudo, dateInscription, email, mdp, telephone) VALUES('" + user.getNom() + "', '" + user.getPseudo() + "', '" + user.getDateInscription() + "', '" + user.getEmail() + "', '" + user.getMdp() +  "' ,'" + user.getTelephone() +  "')" ;
+        String sql = "INSERT INTO Utilisateurs (nom, pseudo, dateInscription, email, mdp, telephone, avote) VALUES('" + user.getNom() + "', '" + user.getPseudo() + "', '" + user.getDateInscription() + "', '" + user.getEmail() + "', '" + user.getMdp() +  "' ,'" + user.getTelephone() + "' ,'" + user.getAvote() + "')" ;
         getWritableDatabase().execSQL(sql);
     }
 
@@ -92,6 +93,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         String email= null;
         String mdp= null;
         String telephone= null;
+        String avote= null;
 
         if (cursor.moveToFirst()){
             id = cursor.getInt(0);
@@ -101,11 +103,12 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             email = cursor.getString(4);
             mdp = cursor.getString(5);
             telephone = cursor.getString(6);
+            avote = cursor.getString(7);
         }
         else{
             System.out.println("L'utilisateur n'existe Pas");
         }
-        return new Utilisateurs(id,nom,pseudo,dateInscription,email,mdp,telephone);
+        return new Utilisateurs(id,nom,pseudo,dateInscription,email,mdp,telephone,avote);
     }
 
 

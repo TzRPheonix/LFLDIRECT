@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -97,5 +98,31 @@ public class AccueilActivity extends AppCompatActivity {
         Intent retour = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(retour);
         finish();
+    }
+
+    public void OnClickCIC(View view){
+        String url ="https://www.cic.fr/fr/index.html";
+        Intent startCIC = new Intent(Intent.ACTION_VIEW);
+        startCIC.setData(Uri.parse(url));
+        startActivity(startCIC);
+    }
+
+    public void OnClickAldi(View view){
+        String url ="https://www.aldi.fr";
+        Intent startCIC = new Intent(Intent.ACTION_VIEW);
+        startCIC.setData(Uri.parse(url));
+        startActivity(startCIC);
+    }
+    public void OnClickKitKat(View view){
+        String url ="https://www.nestle.fr/nosmarques/chocolatconfiseries/kitkat";
+        Intent startCIC = new Intent(Intent.ACTION_VIEW);
+        startCIC.setData(Uri.parse(url));
+        startActivity(startCIC);
+    }
+    public void OnClickIntel(View view){
+        String url ="https://www.intel.fr/content/www/fr/fr/homepage.html";
+        Intent startCIC = new Intent(Intent.ACTION_VIEW);
+        startCIC.setData(Uri.parse(url));
+        startActivity(startCIC);
     }
 }
